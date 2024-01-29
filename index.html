@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="main">
+        <div class="navbar">
+            <ul>
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">ARTIST</a></li>
+                <li><a href="#">GENERE</a></li>
+                <li><a href="#">PLAYLIST</a></li>
+                <li><a href="#">FAVORITE</a></li>
+            </ul>
+        </div>
+
+        <div class="column">
+            <div class="letcol">
+                <h1>MuSiC <br> iS <br> EmOsTiOn</h1>
+            </div>
+
+            <div class="retcol">
+                <p>Click To Play</p>
+                <img src="play.png" id="icon">
+            </div>
+        </div>
+    </div>
+
+    <audio id="song">
+        <source src="alan.mp3" type="audio/mp3">
+    </audio>
+
+    <script>
+        var song = document.getElementById("song");
+        var icon = document.getElementById("icon");
+
+        icon.onclick = function(){
+            if(song.paused){
+                song.play();
+                icon.src = "pause.png"
+            }
+            else{
+                song.pause();
+                icon.src = "play.png"
+            }
+
+            }
+    </script>
+</body>
+</html>
+
+
